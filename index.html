@@ -1,25 +1,271 @@
-<!DOCTYPE html><html lang="pl">
+<!DOCTYPE html>
+<html lang="pl">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Portfolio fotografa</title>  <style>
-    body { text-align: center; margin: 0; }
-    .top { padding: 30px; }
-    .photo img { width: 100%; }
-    .contact { padding: 30px; }
-  </style></head>
-<body><div class="top">
-  <h1>Imię Nazwisko</h1>
-  <p>Fotograf</p>
-</div><div class="photo">
-  <img src="https://via.placeholder.com/600">
-</div><div class="photo">
-  <img src="https://via.placeholder.com/600">
-</div><div class="photo">
-  <img src="https://via.placeholder.com/600">
-</div><div class="photo">
-  <img src="https://via.placeholder.com/600">
-</div><div class="contact">
-  <p>Kontakt: email@gmail.com</p>
-</div></body>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Portfolio | Programista & Fotograf</title>
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<style>
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #111;
+  color: #fff;
+}
+
+header {
+  height: 100vh;
+  background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.8)),
+              url('img/IMG_0776(1).jpg') center/cover no-repeat;
+}
+
+img {
+  height: 250px;
+  width: 100%;
+  object-fit: cover;
+}
+
+.card {
+  background-color: #1a1a1a;
+  border: none;
+  color: white;
+}
+
+.card a {
+  border-radius: 25px;
+}
+
+.col-md-4 div {
+  max-height: 200px;
+}
+
+.col-md-4 div h4{
+  margin-top: 10px;
+}
+
+.col-md-4 .p-4{
+  max-height: 150px;
+}
+
+.img-box {
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.img-box img {
+  transition: transform 0.4s ease;  
+  height: 200px;
+}
+
+.img-box:hover img {
+  transform: scale(1.1);
+}
+
+  .contact-title {
+    text-align: center;
+    margin-bottom: 30px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    color: #fff;
+  }
+
+  .form-label {
+    color: #b3b3b3;
+    font-size: 14px;
+  }
+
+  .form-control {
+    background-color: #2a2a2e;
+    border: 1px solid #3a3a3f;
+    color: #fff;
+    border-radius: 10px;
+    padding: 12px;
+    transition: all 0.25s ease;
+  }
+
+  .form-control::placeholder {
+    color: #888;
+  }
+
+  .form-control:focus {
+    border-color: #ffffff;
+    box-shadow: 0 0 0 0.15rem rgba(255,255,255,0.1);
+    background-color: #2a2a2e;
+  }
+
+  .btn-custom {
+    background: linear-gradient(135deg, #ffffff, #bfbfbf);
+    border: none;
+    color: #111;
+    font-weight: 600;
+    padding: 12px;
+    border-radius: 12px;
+    transition: 0.3s;
+  }
+
+  .btn-custom:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(255,255,255,0.3);
+    background: linear-gradient(135deg, #e6e6e6, #a6a6a6);
+  }
+
+</style>
+
+</head>
+
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-black sticky-top">
+  <div class="container">
+    <a class="navbar-brand fw-bold" href="#">Michał Brzeziak</a>
+    <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#menu">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="menu">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link" href="#">Start</a></li>
+        <li class="nav-item"><a class="nav-link" href="#about">O mnie</a></li>
+        <li class="nav-item"><a class="nav-link" href="https://github.com/Michal1089?tab=repositories" target="_blank">Projekty</a></li>
+        <li class="nav-item"><a class="nav-link" href="https://500px.com/mbrzeziak09" target="_blank">Galeria</a></li>
+        <li class="nav-item"><a class="nav-link" href="#services">Usługi</a></li>
+        <li class="nav-item"><a class="nav-link" href="#contact">Kontakt</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<header class="d-flex flex-column justify-content-center align-items-center text-center">
+  <h1 class="fw-bold">Michał Brzeziak</h1>
+  <p class="opacity-75">Programista • Fotograf</p>
+</header>
+
+<section id="about" class="container py-5 text-center">
+  <h2 class="mb-4">O mnie</h2>
+  <p class="mx-auto" style="max-width: 700px;">
+    Jestem programistą oraz fotografem. Tworzę nowoczesne strony internetowe,
+    aplikacje webowe oraz zajmuję się fotografią portretową i eventową.
+    Łączę technologię z kreatywnością, aby dostarczać estetyczne i funkcjonalne projekty.
+  </p>
+</section>
+
+<section id="projects" class="container py-5">
+  <h2 class="text-center mb-5">Projekty</h2>
+  <div class="row g-4">
+
+    <div class="col-md-4">
+      <div class="card p-3">
+        <h4>Chatbot</h4>
+        <p class="opacity-75">AI Chatbot z API od OpenRouter</p>
+        <a href="https://michal1089.github.io/aichatbot" class="btn btn-outline-light btn-sm" target="_blank">Zobacz</a>
+      </div>
+    </div>
+
+    <div class="col-md-4">
+      <div class="card p-3">
+        <h4>BMI</h4>
+        <p class="opacity-75">Strona do obliczania własnego BMI</p>
+        <a href="https://michal1089.github.io/bmi" class="btn btn-outline-light btn-sm" target="_blank">Zobacz</a>
+      </div>
+    </div>
+
+    <div class="col-md-4">
+      <div class="card p-3">
+        <h4>FIFA 27</h4>
+        <p class="opacity-75">Najnowsza gra FIFA 27. Dostępna tylko na PC</p>
+        <a href="https://michal1089.github.io/fifa27" class="btn btn-outline-light btn-sm" target="_blank">Zobacz</a>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section id="gallery" class="container py-5">
+  <h2 class="text-center mb-5">Fotografia</h2>
+  <div class="row g-4">
+    <div class="col-12 col-md-6 col-lg-3"><div class="img-box"><img src="img/IMG_0728(1).jpg" class="img-fluid rounded"></div></div>
+    <div class="col-12 col-md-6 col-lg-3"><div class="img-box"><img src="img/IMG_0731(1).jpg" class="img-fluid rounded"></div></div>
+    <div class="col-12 col-md-6 col-lg-3"><div class="img-box"><img src="img/IMG_0994(1).jpg" class="img-fluid rounded"></div></div>
+    <div class="col-12 col-md-6 col-lg-3"><div class="img-box"><img src="img/IMG_0996(1).jpg" class="img-fluid rounded"></div></div>
+    <div class="col-12 col-md-6 col-lg-3"><div class="img-box"><img src="img/IMG_0998(1).jpg" class="img-fluid rounded"></div></div>
+    <div class="col-12 col-md-6 col-lg-3"><div class="img-box"><img src="img/IMG_1024(2).jpg" class="img-fluid rounded"></div></div>
+    <div class="col-12 col-md-6 col-lg-3"><div class="img-box"><img src="img/IMG_1029(1).jpg" class="img-fluid rounded"></div></div>
+    <div class="col-12 col-md-6 col-lg-3"><div class="img-box"><img src="img/IMG_0774(1).jpg" class="img-fluid rounded"></div></div>
+  </div>
+</section>
+
+<section id="services" class="container py-5 text-center">
+  <h2 class="mb-5">Usługi</h2>
+  <div class="row g-4">
+
+    <div class="col-md-4 d-flex">
+      <div class="p-4 bg-dark rounded w-100 h-100 d-flex flex-column">
+        <h4>Tworzenie stron</h4>
+        <p class="opacity-75 flex-grow-1">Nowoczesne i responsywne strony internetowe.</p>
+      </div>
+    </div>
+
+    <div class="col-md-4 d-flex">
+      <div class="p-4 bg-dark rounded w-100 h-100 d-flex flex-column">
+        <h4>Aplikacje webowe</h4>
+        <p class="opacity-75 flex-grow-1">Frontend + backend dostosowany do potrzeb.</p>
+      </div>
+    </div>
+
+    <div class="col-md-4 d-flex">
+      <div class="p-4 bg-dark rounded w-100 h-100 d-flex flex-column">
+        <h4>Fotografia</h4>
+        <p class="opacity-75 flex-grow-1">Sesje zdjęciowe i reportaże eventowe.</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<footer class="text-center py-4 bg-black">
+  <section id="contact" class="container py-5 text-center">
+  <form action="https://formspree.io/f/mlgovlgd" method="POST" class="p-4 p-md-5 shadow-sm bg-black text-light">
+      <h2 class="contact-title">Skontaktuj się z nami</h2>
+      <div class="mb-3">
+        <label for="name" class="form-label">Twoje imię</label>
+        <input type="text" class="form-control border-0" id="name" name="name" placeholder="Wpisz swoje imię" required>
+      </div>
+
+      <div class="mb-3">
+        <label for="email" class="form-label">Twój email</label>
+        <input type="email" class="form-control border-0" id="email" name="_replyto" placeholder="Wpisz swój email" required>
+      </div>
+
+      <div class="mb-3">
+        <label for="message" class="form-label">Twoja wiadomość</label>
+        <textarea class="form-control border-0" id="message" name="message" rows="5" placeholder="Napisz wiadomość" required></textarea>
+      </div><br>
+
+      <div class="d-grid">
+        <button type="submit" class="btn btn-custom btn-lg">Wyślij wiadomość</button>
+      </div>
+  </form>
+
+  <a href="https://instagram.com/michal_brzeziak" target="_blank">
+  <i class="fab fa-instagram fa-2x" style="color: white; margin-right: 5px;"></i>
+  </a>
+  <a href="https://linkedin.com/in/michał-brzeziak-0a5721386" target="_blank">
+  <i class="fab fa-linkedin fa-2x" style="color: white;"></i>
+  </a>
+  <a href="https://github.com/michal1089" target="_blank">
+  <i class="fab fa-github fa-2x" style="color: white; margin-left: 5px;"></i>
+  </a>
+</section>
+  <p class="mb-0 opacity-50">&copy; <script>document.write(new Date().getFullYear())</script> Michał Brzeziak</p>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
 </html>
